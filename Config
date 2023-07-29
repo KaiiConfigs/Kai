@@ -11409,6 +11409,7 @@ end)
 runFunction(function()
     EnchantedSwordEffect = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
         Name = "EnchantedSwordEffect",
+        HoverText = "Sn00pyyyy",
         Function = function(callback)
             if callback then 
                 spawn(function()
@@ -11445,7 +11446,7 @@ runFunction(function()
                 end
             end
         end
-        ["HoverText"] = "Sn00py"
+        
     })
 end)
 runFunction(function()
