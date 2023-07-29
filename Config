@@ -23041,13 +23041,3 @@ runFunction(function()
         end
     })
 end)
-runFunction(function()
-	CustomKeystokes = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "CustomKeystokes",
-		Function = function(callback)
-			if callback then 
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/SnoopyOwner/Modules/main/Keystrokes"))()
-			end
-		end
-	})
-end)
