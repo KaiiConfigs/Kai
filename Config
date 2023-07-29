@@ -11445,7 +11445,7 @@ runFunction(function()
                 end
             end
         end
-        ["HoverText"] = "Snoopy"
+        ["HoverText"] = "Sn00py"
     })
 end)
 runFunction(function()
