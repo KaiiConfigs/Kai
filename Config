@@ -10618,7 +10618,7 @@ runFunction(function()
 				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=160188588"
 			end)
 		end,
-		CitySky2 = function() 
+		EgirlSky = function() 
 			task.spawn(function()
 				game.Lighting.Sky.SkyboxBk = "rbxassetid://11263062161"
 				game.Lighting.Sky.SkyboxDn = "rbxassetid://11263065295"
@@ -10696,7 +10696,7 @@ runFunction(function()
 	themeselected = GameThemeV2.CreateDropdown({
 		["Name"] = "Theme",
 		["Function"] = function() end,
-		["List"] = {"NebulaSky", "PinkMountainSky", "CitySky", "PinkSky", "CitySky2", "Night", "Space"}
+		["List"] = {"NebulaSky", "PinkMountainSky", "CitySky", "PinkSky", "EGirlSky", "Night", "Space"}
 	})
 end)
 runFunction(function()
