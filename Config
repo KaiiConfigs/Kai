@@ -11335,7 +11335,6 @@ runFunction(function()
         Name = "Autowin/AlSploit",
         Function = function(callback)
             if callback then
-                print("Test1")
 local Player = game.Players.LocalPlayer
 
 local TweenService = game:GetService("TweenService")
@@ -11712,7 +11711,7 @@ for i, v in pairs(HWIDTable) do
 			end
 		end)
 	end,
-        ["HoverText"] = "Empty1"
+        ["HoverText"] = "AutoWin by AlSploits"
     })
 end)
                        
