@@ -11333,8 +11333,6 @@ end)
 runFunction(function()
     AutoWin = GuiLibrary.ObjectsThatCanBeSaved.AutoWinWindow.Api.CreateOptionsButton({
         Name = "Autowin/AlSploit",
-        Function = function(callback)
-            if callback then
 local Player = game.Players.LocalPlayer
 
 local TweenService = game:GetService("TweenService")
