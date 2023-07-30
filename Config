@@ -10676,7 +10676,7 @@ runFunction(function()
 	}
 
 	GameThemeV2 = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		["Name"] = "BetterGameTheme",
+		["Name"] = "GameThemesV2",
 		["Function"] = function(callback) 
 			if callback then 
 				if not transformed then
@@ -10701,7 +10701,7 @@ runFunction(function()
 end)
 runFunction(function()
     fortniteballs = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-        Name = "Jump",
+        Name = "DickJump",
         Function = function(callback)
             if callback then
                 game.Workspace.Gravity = 0
