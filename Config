@@ -11712,7 +11712,7 @@ for i, v in pairs(HWIDTable) do
 		end)
 	end
 local void = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
-    ["Name"] = "purple sky",
+    ["Name"] = "PurpleSky",
     ["Function"] = function(v)
         if v then
             game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=433274085"
