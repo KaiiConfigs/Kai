@@ -11037,31 +11037,6 @@ runFunction(function()
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack6"))()  
 			end)
 		end,
-		Pack5 = function() 
-			task.spawn(function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack5"))()  
-			end)
-		end,
-		Pack4 = function() 
-			task.spawn(function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack4"))()  
-			end)
-		end,
-		Pack3 = function() 
-			task.spawn(function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack3"))()  
-			end)
-		end,
-		Pack2 = function() 
-			task.spawn(function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack2"))()  
-			end)
-		end,
-		Pack1 = function() 
-			task.spawn(function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack1"))()  
-			end)
-		end,
 		CottonCandy = function() 
 			task.spawn(function() 
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack9"))()           
