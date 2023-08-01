@@ -11022,17 +11022,17 @@ runFunction(function()
 	local packselected = {["Value"] = "OldBedwars"}
 
 	local packfunctions = {
-		Pack7 = function() 
+		Pack3 = function() 
 			task.spawn(function()
 				loadstring(game:HttpGet("https://https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack7"))()  
 			end)
 		end,
-		Pack8 = function() 
+		Pack2 = function() 
 			task.spawn(function()
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack8"))()  
 			end)
 		end,
-		Pack6 = function() 
+		Pack1 = function() 
 			task.spawn(function()
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack6"))()  
 			end)
@@ -11282,9 +11282,7 @@ runFunction(function()
 		["Function"] = function() end,
 		["List"] = { 
 		"Pack1", "Pack2", 
-		"Pack3", "Pack4", 
-		"Pack5", "Pack6", 
-		"Pack7","Pack8", 
+		"Pack3",  
 		"PinkPack", "CottonCandy", 
 		"Pack512x", "Pack1024x", 
                 "SygPack", "PrivatePack", 
