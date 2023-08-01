@@ -11268,7 +11268,12 @@ runFunction(function()
 		end,
          SygPack = function() 
             task.spawn(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/SygPack"))()   
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/Kai/main/TexturePacks"))()   
+           end)
+		end,
+         BetterDemonSlayer = function() 
+            task.spawn(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/BetterDemonSlayer"))()   
            end)
 		end,
 		Pack1024x = function() 
