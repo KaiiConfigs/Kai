@@ -10939,34 +10939,7 @@ runFunction(function()
 		end
 	})
 end)
-runFunction(function()
-	FirstPack = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "Pack#1",
-		Function = function(callback)
-			if callback then
-                   loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack9"))()
-        end)
-runFunction(function()
-	SecondPack = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "Pack512x",
-		Function = function(callback)
-			if callback then
-                   loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack512x"))()
-		end)
-runFunction(function()
-	ThirdPack = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "BetterDemonSlayer",
-		Function = function(callback)
-			if callback then
-                   loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/BetterDemonSlayer"))()
-		end)
-		runFunction(function()
-	FourthPack = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "SygPack",
-		Function = function(callback)
-			if callback then
-                   loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/Kai/main/TexturePacks"))()   
-		end)
+
 local skidDetected = {}
 runFunction(function()
     SkidDetector = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
