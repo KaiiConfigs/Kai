@@ -10609,13 +10609,82 @@ runFunction(function()
 			end)
 		end,
 		BlueSpace = function() 
-			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=1127563035"
-				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=1127563006"
-				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=1127563026"
-				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=1127563216"
-				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=1127563115"
-				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=1127562999"
+			task.spawn(function() 
+
+				local Vignette = true
+
+
+				local Lighting = game:GetService("Lighting")
+				local ColorCor = Instance.new("ColorCorrectionEffect")
+				local SunRays = Instance.new("SunRaysEffect")
+				local Sky = Instance.new("Sky")
+				local Atm = Instance.new("Atmosphere")
+
+
+				for i, v in pairs(Lighting:GetChildren()) do
+					if v then
+						v:Destroy()
+					end
+				end
+
+				ColorCor.Parent = Lighting
+				SunRays.Parent = Lighting
+				Sky.Parent = Lighting
+				Atm.Parent = Lighting
+
+				if Vignette == true then
+					local Gui = Instance.new("ScreenGui")
+					Gui.Parent = StarterGui
+					Gui.IgnoreGuiInset = true
+
+					local ShadowFrame = Instance.new("ImageLabel")
+					ShadowFrame.Parent = Gui
+					ShadowFrame.AnchorPoint = Vector2.new(0,1,0)
+					ShadowFrame.Position = UDim2.new(0,0,0,0)
+					ShadowFrame.Size = UDim2.new(0,0,0,0)
+					ShadowFrame.BackgroundTransparency = 1
+					ShadowFrame.Image = ""
+					ShadowFrame.ImageTransparency = 1
+					ShadowFrame.ZIndex = 0
+				end
+
+
+				ColorCor.Brightness = 0.3
+				ColorCor.Contrast = 0.5
+				ColorCor.Saturation = -0.3
+				ColorCor.TintColor = Color3.fromRGB(153, 158, 232)
+
+				SunRays.Intensity = 0.075
+				SunRays.Spread = 0.727
+
+				Sky.SkyboxBk = "rbxassetid://1127563035"
+				Sky.SkyboxDn = "rbxassetid://1127563006"
+				Sky.SkyboxFt = "rbxassetid://1127563026"
+				Sky.SkyboxLf = "rbxassetid://1127563216"
+				Sky.SkyboxRt = "rbxassetid://1127563115"
+				Sky.SkyboxUp = "rbxassetid://1127562999"
+				Sky.SunAngularSize = 10
+
+				Lighting.Ambient = Color3.fromRGB(2,2,2)
+				Lighting.Brightness = 0.3
+				Lighting.ColorShift_Bottom = Color3.fromRGB(0,0,0)
+				Lighting.ColorShift_Top = Color3.fromRGB(0,0,0)
+				Lighting.EnvironmentDiffuseScale = 0.2
+				Lighting.EnvironmentSpecularScale = 0.2
+				Lighting.GlobalShadows = true
+				Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
+				Lighting.ShadowSoftness = 0.2
+				Lighting.ClockTime = 15
+				Lighting.GeographicLatitude = 45
+				Lighting.ExposureCompensation = 0.5
+
+				Atm.Density = 0.364
+				Atm.Offset = 0.556
+				Atm.Color = Color3.fromRGB(12, 16, 84)
+				Atm.Decay = Color3.fromRGB(29, 37, 152)
+				Atm.Glare = 0.36
+				Atm.Haze = 1.72	
+
 			end)
 		end,
 		DarkNight = function() 
