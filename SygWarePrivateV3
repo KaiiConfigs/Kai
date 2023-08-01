@@ -10940,62 +10940,33 @@ runFunction(function()
 	})
 end)
 runFunction(function()
-	FithPack = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "Texturepacks",
+	FirstPack = GuiLibrary.ObjectsThatCanBeSaved.TexturePacksWindow.Api.CreateOptionsButton({
+		Name = "Pack#1",
 		Function = function(callback)
 			if callback then
-                           local packfunctions = {
-		CottonCandy = function() 
-			task.spawn(function() 
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack9"))()           
-			end)
-        end,
-        Pack512x = function() 
-            task.spawn(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack512x"))()   
-           end)
-		end,
-		BetterDemonSlayer = function() 
-            task.spawn(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/BetterDemonSlayer"))()   
-           end)
-		end,
-         SYGPack = function() 
-            task.spawn(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/Kai/main/TexturePacks"))()   
-           end)
-		end
-	}
-
-	TexturePacks = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		["Name"] = "TexturePacks",
-		["Function"] = function(callback) 
-			if callback then 
-				if not transformed then
-					transformed = true
-					packfunctions[packselected["Value"]]()
-				end
-            else 
-                if TexturePacks.Enabled == false then
-                    task.wait()
-                    func:disconnect()
-                end
-			end
-		end,
-		["ExtraText"] = function()
-			return packselected["Value"]
-		end
-	})
-	packselected = TexturePacks.CreateDropdown({
-		["Name"] = "Pack",
-		["Function"] = function() end,
-		["List"] = {  
-	        "CottonCandy", "BetterDemonSlayer",
-		"Pack512x",
-	    "PrivatePack", "SYGPack"}
-	})
-end)
-
+                   loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack9"))()
+        end)
+runFunction(function()
+	SecondPack = GuiLibrary.ObjectsThatCanBeSaved.TexturePacksWindow.Api.CreateOptionsButton({
+		Name = "Pack512x",
+		Function = function(callback)
+			if callback then
+                   loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack512x"))()
+		end)
+runFunction(function()
+	ThirdPack = GuiLibrary.ObjectsThatCanBeSaved.TexturePacksWindow.Api.CreateOptionsButton({
+		Name = "BetterDemonSlayer",
+		Function = function(callback)
+			if callback then
+                   loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/BetterDemonSlayer"))()
+		end)
+		runFunction(function()
+	FourthPack = GuiLibrary.ObjectsThatCanBeSaved.TexturePacksWindow.Api.CreateOptionsButton({
+		Name = "SygPack",
+		Function = function(callback)
+			if callback then
+                   loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/Kai/main/TexturePacks"))()   
+		end)
 local skidDetected = {}
 runFunction(function()
     SkidDetector = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
