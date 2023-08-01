@@ -10608,69 +10608,133 @@ runFunction(function()
 
 			end)
 		end,
-		PinkMountainSky = function() 
+		BlueSpace = function() 
 			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=160188495"
-				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=160188614"
-				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=160188609"
-				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=160188589"
-				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=160188597"
-				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=160188588"
+				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=1127563035"
+				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=1127563006"
+				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=1127563026"
+				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=1127563216"
+				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=1127563115"
+				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=1127562999"
 			end)
 		end,
-		EgirlSky = function() 
+		DarkNight = function() 
 			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "rbxassetid://11263062161"
-				game.Lighting.Sky.SkyboxDn = "rbxassetid://11263065295"
-				game.Lighting.Sky.SkyboxFt = "rbxassetid://11263066644"
-				game.Lighting.Sky.SkyboxLf = "rbxassetid://11263068413"
-				game.Lighting.Sky.SkyboxRt = "rbxassetid://11263069782"
-				game.Lighting.Sky.SkyboxUp = "rbxassetid://11263070890"
+				game.Lighting.Sky.SkyboxBk = "rbxassetid://154185004"
+				game.Lighting.Sky.SkyboxDn = "rbxassetid://154184960"
+				game.Lighting.Sky.SkyboxFt = "rbxassetid://154185021"
+				game.Lighting.Sky.SkyboxLf = "rbxassetid://154184943"
+				game.Lighting.Sky.SkyboxRt = "rbxassetid://154184972"
+				game.Lighting.Sky.SkyboxUp = "rbxassetid://154185031"
 			end)
 		end,
-		CitySky = function() 
-			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "rbxassetid://2128458653"
-				game.Lighting.Sky.SkyboxDn = "rbxassetid://2128462480"
-				game.Lighting.Sky.SkyboxFt = "rbxassetid://2128458653"
-				game.Lighting.Sky.SkyboxLf = "rbxassetid://2128462027"
-				game.Lighting.Sky.SkyboxRt = "rbxassetid://2128462027"
-				game.Lighting.Sky.SkyboxUp = "rbxassetid://2128462236"
-				game.Lighting.sky.SunAngularSize = 4
-				game.Lighting.sky.MoonTextureId = "rbxassetid://8139665943"
-				game.Lighting.sky.MoonAngularSize = 11
-				lightingService.Atmosphere.Color = Color3.fromRGB(255, 214, 172)
-				lightingService.Atmosphere.Decay = Color3.fromRGB(255, 202, 175)
+		CoolSky = function() 
+			task.spawn(function() 
+
+				local Vignette = true
+
+
+				local Lighting = game:GetService("Lighting")
+				local ColorCor = Instance.new("ColorCorrectionEffect")
+				local SunRays = Instance.new("SunRaysEffect")
+				local Sky = Instance.new("Sky")
+				local Atm = Instance.new("Atmosphere")
+
+
+				for i, v in pairs(Lighting:GetChildren()) do
+					if v then
+						v:Destroy()
+					end
+				end
+
+				ColorCor.Parent = Lighting
+				SunRays.Parent = Lighting
+				Sky.Parent = Lighting
+				Atm.Parent = Lighting
+
+				if Vignette == true then
+					local Gui = Instance.new("ScreenGui")
+					Gui.Parent = StarterGui
+					Gui.IgnoreGuiInset = true
+
+					local ShadowFrame = Instance.new("ImageLabel")
+					ShadowFrame.Parent = Gui
+					ShadowFrame.AnchorPoint = Vector2.new(0,1,0)
+					ShadowFrame.Position = UDim2.new(0,0,0,0)
+					ShadowFrame.Size = UDim2.new(0,0,0,0)
+					ShadowFrame.BackgroundTransparency = 1
+					ShadowFrame.Image = ""
+					ShadowFrame.ImageTransparency = 1
+					ShadowFrame.ZIndex = 0
+				end
+
+
+				ColorCor.Brightness = 0.3
+				ColorCor.Contrast = 0.5
+				ColorCor.Saturation = -0.3
+				ColorCor.TintColor = Color3.fromRGB(255, 235, 203)
+
+				SunRays.Intensity = 0.075
+				SunRays.Spread = 0.727
+
+				Sky.SkyboxBk = "rbxassetid://11555017034"
+				Sky.SkyboxDn = "rbxassetid://11555013415"
+				Sky.SkyboxFt = "rbxassetid://11555010145"
+				Sky.SkyboxLf = "rbxassetid://11555006545"
+				Sky.SkyboxRt = "rbxassetid://11555000712"
+				Sky.SkyboxUp = "rbxassetid://11554996247"
+				Sky.SunAngularSize = 10
+
+				Lighting.Ambient = Color3.fromRGB(2,2,2)
+				Lighting.Brightness = 0.3
+				Lighting.ColorShift_Bottom = Color3.fromRGB(0,0,0)
+				Lighting.ColorShift_Top = Color3.fromRGB(0,0,0)
+				Lighting.EnvironmentDiffuseScale = 0.2
+				Lighting.EnvironmentSpecularScale = 0.2
+				Lighting.GlobalShadows = true
+				Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
+				Lighting.ShadowSoftness = 0.2
+				Lighting.ClockTime = 15
+				Lighting.GeographicLatitude = 45
+				Lighting.ExposureCompensation = 0.5
+
+				Atm.Density = 0.364
+				Atm.Offset = 0.556
+				Atm.Color = Color3.fromRGB(179, 59, 249)
+				Atm.Decay = Color3.fromRGB(155, 212, 255)
+				Atm.Glare = 0.36
+				Atm.Haze = 1.72	
+
 			end)
 		end,
-                Night = function() 
+                PurpleSky = function() 
 			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=154185502"
-				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=154185502"
-				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=154185502"
-				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=154185502"
-				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=154185502"
-				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=154185502"
+				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=6847607535"
+				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=6847607977"
+				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=6847608302"
+				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=6847608608"
+				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=6847608986"
+				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=6847609323"
 			end)
 		end,
                 Space = function() 
 			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=182085924"
-				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=182085924"
-				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=182085924"
-				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=182085924"
-				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=182085924"
-				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=182085924"
+				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=167521402"
+				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=167521417"
+				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=167521450"
+				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=167521464"
+				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=167521476"
+				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=167521482"
 			end)
 		end,
 		PinkSky = function() 
 			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=271042516"
-				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=271077243"
-				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=271042556"
-				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=271042310"
-				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=271042467"
-				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=271077958"
+				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=331591508"
+				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=331591633"
+				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=331591735"
+				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=331591794"
+				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=331591853"
+				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=331591919"
 			end)
 		end
 	}
@@ -10696,7 +10760,7 @@ runFunction(function()
 	themeselected = GameThemeV2.CreateDropdown({
 		["Name"] = "Theme",
 		["Function"] = function() end,
-		["List"] = {"NebulaSky", "PinkMountainSky", "CitySky", "PinkSky", "EgirlSky", "Night", "Space"}
+		["List"] = {"NebulaSky", "BlueSpace", "CoolSky", "PinkSky", "DarkNight", "Space", "PurpleSky"}
 	})
 end)
 runFunction(function()
