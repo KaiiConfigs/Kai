@@ -10490,12 +10490,12 @@ runFunction(function()
 						local healthbarProgressWrapper
 						local healthbar
 						local speed = 1
-						local redStart = 109
-						local greenStart = 175
-						local blueStart = 255
-						local redEnd = 211
-						local greenEnd = 110
-						local blueEnd = 255
+						local redStart = 6
+						local greenStart = 4
+						local blueStart = 102
+						local redEnd = 3
+						local greenEnd = 3
+						local blueEnd = 210
 
 						repeat
 							if not healthbar or not healthbar.Parent then
@@ -11121,7 +11121,7 @@ runFunction(function()
 							pcall(function()
 								highlight2.FillTransparency = 1
 								while wait() do
-									highlight2.OutlineColor = Color3.fromRGB(211, 183, 245)
+									highlight2.OutlineColor = Color3.fromRGB(9, 9, 204)
 								end
 							end)
 						end
