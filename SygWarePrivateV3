@@ -5938,12 +5938,12 @@ runFunction(function()
 				end
 				local sky = Instance.new("Sky")
 				sky.StarCount = 5000
-				sky.SkyboxUp = "rbxassetid://264908339"
-				sky.SkyboxLf = "rbxassetid://264907909"
-				sky.SkyboxFt = "rbxassetid://264909420"
-				sky.SkyboxBk = "rbxassetid://264909758"
-				sky.SkyboxDn = "rbxassetid://11854708161"
-				sky.SkyboxRt = "rbxassetid://11854708161"
+				sky.SkyboxUp = "rbxassetid://1729400806"
+				sky.SkyboxLf = "rbxassetid://1729396070"
+				sky.SkyboxFt = "rbxassetid://1729398837"
+				sky.SkyboxBk = "rbxassetid://1729399897"
+				sky.SkyboxDn = "rbxassetid://1729397758"
+				sky.SkyboxRt = "rbxassetid://1729490019"
 				sky.SunTextureId = "rbxassetid://6196665106"
 				sky.SunAngularSize = 11
 				sky.MoonTextureId = "rbxassetid://8139665943"
