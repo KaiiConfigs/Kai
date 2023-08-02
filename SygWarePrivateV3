@@ -10912,7 +10912,7 @@ runFunction(function()
 				Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
 				Lighting.ShadowSoftness = 0.2
 				Lighting.ClockTime = 15
-				Lighting.GeographicLatitude = 45
+				Lighting.GeographicLatitude = 25
 				Lighting.ExposureCompensation = 0.5
 
 				Atm.Density = 0.364
