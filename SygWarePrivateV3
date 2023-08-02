@@ -10662,7 +10662,7 @@ runFunction(function()
 				ColorCor.Brightness = 0.3
 				ColorCor.Contrast = 0.5
 				ColorCor.Saturation = -0.3
-				ColorCor.TintColor = Color3.fromRGB(19, 28, 74)
+				ColorCor.TintColor = Color3.fromRGB(142, 146, 208)
 
 				SunRays.Intensity = 0.075
 				SunRays.Spread = 0.427
