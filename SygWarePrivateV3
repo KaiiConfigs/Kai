@@ -11679,8 +11679,8 @@ end)
     end
 })
 runFunction(function()
-    AntiMods = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-        Name = "AntiMods",
+    AntiBan = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
+        Name = "AntiBan",
         Function = function(callback)
             if callback then
 		repeat task.wait() until game:IsLoaded()
