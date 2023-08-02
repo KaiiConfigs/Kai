@@ -11680,7 +11680,7 @@ end)
 })
 runFunction(function()
 	local SygSpeedModule = {Enabled = false}
-	SygSpeedModule = Guilibrary-ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
+	SygSpeedModule = Guilibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
 		Name = "SygSpeed",
 		HoverText = "Made by Kai",
 		Function = function(callback)
