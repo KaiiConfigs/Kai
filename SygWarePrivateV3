@@ -10659,7 +10659,7 @@ runFunction(function()
 				end
 
 
-				ColorCor.Brightness = 0.3
+				ColorCor.Brightness = 0.45
 				ColorCor.Contrast = 0.5
 				ColorCor.Saturation = -0.3
 				ColorCor.TintColor = Color3.fromRGB(142, 146, 208)
@@ -10673,7 +10673,7 @@ runFunction(function()
 				Sky.SkyboxLf = "rbxassetid://1127563216"
 				Sky.SkyboxRt = "rbxassetid://1127563115"
 				Sky.SkyboxUp = "rbxassetid://1127562999"
-				Sky.SunAngularSize = 4
+				Sky.SunAngularSize = 3
 
 				Lighting.Ambient = Color3.fromRGB(2,2,2)
 				Lighting.Brightness = 0.3
