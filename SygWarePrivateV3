@@ -11679,18 +11679,27 @@ end)
     end
 })
 runFunction(function()
-	local SygSpeedModule = {Enabled = false}
-	SygSpeed = Guilibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "SygSpeed",
-		Function = function(callback)
-		    if callback then
-			    repeat
-				    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
-					task.wait(1.5)
-					game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
-					task.wait(1)
-				until not SygSpeed.Enabled
-			end
-		end
+    AntiMods = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
+        Name = "AntiMods",
+        Function = function(callback)
+            if callback then
+		repeat task.wait() until game:IsLoaded()
+                local groupId = 5774246
+                local roleId = 121
+                local function checkUserRole(player)
+                    if player:IsInGroup(groupId) and player:GetRankInGroup(groupId) == roleId then
+                        warningNotification("Vape", "A Staff Has Joined The Game, Leaving....", 60)
+			wait(2)
+                        bedwars.ClientHandler:Get("TeleportToLobby"):SendToServer()
+                    end
+                end
+                local function checkAllUsersRoles()
+                    for _, player in pairs(game.Players:GetPlayers()) do
+                        checkUserRole(player)
+                    end
+                end
+                checkAllUsersRoles()
+            end
+        end
     })
 end)
