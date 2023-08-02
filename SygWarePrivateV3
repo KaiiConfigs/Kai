@@ -10655,7 +10655,7 @@ runFunction(function()
 				ColorCor.TintColor = Color3.fromRGB(153, 158, 232)
 
 				SunRays.Intensity = 0.075
-				SunRays.Spread = 0.727
+				SunRays.Spread = 0.427
 
 				Sky.SkyboxBk = "rbxassetid://1127563035"
 				Sky.SkyboxDn = "rbxassetid://1127563006"
