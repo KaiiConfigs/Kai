@@ -11056,7 +11056,7 @@ runFunction(function()
 	themeselected = BetterGameThemes.CreateDropdown({
 		["Name"] = "Theme",
 		["Function"] = function() end,
-		["List"] = {"NebulaSky", "BlueSpace", "CoolSky", "PinkSky", "DarkNight", "Space", "PurpleSky", "VibeNight"}
+		["List"] = {"NebulaSky", "BlueSpace", "CoolSky", "PinkSky", "DarkNight", "Space", "PurpleSky", "VibeNight", "ShaderBlueSpace"}
 	})
 end)
 runFunction(function()
