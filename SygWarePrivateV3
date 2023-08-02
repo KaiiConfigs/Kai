@@ -10894,12 +10894,12 @@ runFunction(function()
 				SunRays.Intensity = 0.050
 				SunRays.Spread = 0.327
 
-				Sky.SkyboxBk = "rbxassetid://1127563035"
-				Sky.SkyboxDn = "rbxassetid://1127563006"
-				Sky.SkyboxFt = "rbxassetid://1127563026"
-				Sky.SkyboxLf = "rbxassetid://1127563216"
-				Sky.SkyboxRt = "rbxassetid://1127563115"
-				Sky.SkyboxUp = "rbxassetid://1127562999"
+				Sky.SkyboxBk = "rbxassetid://6847607535"
+				Sky.SkyboxDn = "rbxassetid://6847607977"
+				Sky.SkyboxFt = "rbxassetid://6847608302"
+				Sky.SkyboxLf = "rbxassetid://6847608608"
+				Sky.SkyboxRt = "rbxassetid://6847608986"
+				Sky.SkyboxUp = "rbxassetid://6847609323"
 				Sky.SunAngularSize = 4
 
 				Lighting.Ambient = Color3.fromRGB(2,2,2)
