@@ -10690,7 +10690,7 @@ runFunction(function()
 
 				Atm.Density = 0.364
 				Atm.Offset = 0.556
-				Atm.Color = Color3.fromRGB(4, 16, 77)
+				Atm.Color = Color3.fromRGB(0, 8, 115)
 				Atm.Decay = Color3.fromRGB(3, 10, 46)
 				Atm.Glare = 0.36
 				Atm.Haze = 1.72	
