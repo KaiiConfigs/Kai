@@ -5942,8 +5942,8 @@ runFunction(function()
 				sky.SkyboxLf = "rbxassetid://264907909"
 				sky.SkyboxFt = "rbxassetid://264909420"
 				sky.SkyboxBk = "rbxassetid://264909758"
-				sky.SkyboxDn = "rbxassetid://264908886"
-				sky.SkyboxRt = "rbxassetid://264907379"
+				sky.SkyboxDn = "rbxassetid://11854708161"
+				sky.SkyboxRt = "rbxassetid://11854708161"
 				sky.SunTextureId = "rbxassetid://6196665106"
 				sky.SunAngularSize = 11
 				sky.MoonTextureId = "rbxassetid://8139665943"
