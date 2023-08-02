@@ -11703,26 +11703,3 @@ runFunction(function()
         end
     })
 end)
-runFunction(function()
-    local AntiCheatDisabler = {Enabled = false}
-	AntiCheatDisabler = Guilibrary.ObjectsThatCanBeSaved.CustomModulesWindow.Api.CreateOptionsButton({
-        Name = "AntiCheatDisabler",
-		HoverText = "40 Cframe speed with scythe",
-		Function = function(callback)
-		    if callback then
-			    repeat 
-				  game:GetService('RunService').RenderStepped:Connect(function()
-
-                    local args = {
-                      [1] = {
-                          ["direction"] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector
-                      }
-                    }
-  
-                         game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.ScytheDash:FireServer(unpack(args))
-                  end)
-				until not AntiCheatDisablerModule.Enabled
-			end
-		end
-	})
-end)
