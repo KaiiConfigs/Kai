@@ -10659,13 +10659,13 @@ runFunction(function()
 				end
 
 
-				ColorCor.Brightness = 0.45
+				ColorCor.Brightness = 0.3
 				ColorCor.Contrast = 0.5
 				ColorCor.Saturation = -0.3
 				ColorCor.TintColor = Color3.fromRGB(142, 146, 208)
 
-				SunRays.Intensity = 0.040
-				SunRays.Spread = 0.357
+				SunRays.Intensity = 0.030
+				SunRays.Spread = 0.157
 
 				Sky.SkyboxBk = "rbxassetid://1127563035"
 				Sky.SkyboxDn = "rbxassetid://1127563006"
@@ -10693,7 +10693,7 @@ runFunction(function()
 				Atm.Color = Color3.fromRGB(0, 8, 115)
 				Atm.Decay = Color3.fromRGB(3, 10, 46)
 				Atm.Glare = 0.36
-				Atm.Haze = 1.72	
+				Atm.Haze = 1.32	
 
 			end)
 		end,
