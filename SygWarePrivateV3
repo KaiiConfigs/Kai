@@ -10673,7 +10673,7 @@ runFunction(function()
 				Sky.SkyboxLf = "rbxassetid://1127563216"
 				Sky.SkyboxRt = "rbxassetid://1127563115"
 				Sky.SkyboxUp = "rbxassetid://1127562999"
-				Sky.SunAngularSize = 6
+				Sky.SunAngularSize = 5
 
 				Lighting.Ambient = Color3.fromRGB(2,2,2)
 				Lighting.Brightness = 0.3
