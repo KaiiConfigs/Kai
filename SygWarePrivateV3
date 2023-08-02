@@ -10525,7 +10525,7 @@ runFunction(function()
 end)
 runFunction(function()
 	local transformed = false
-	local GameThemeV2 = {["Enabled"] = false}
+	local BetterGameThemes = {["Enabled"] = false}
 	local themeselected = {["Value"] = "OldBedwars"}
 
 	local themefunctions = {
@@ -10877,15 +10877,15 @@ runFunction(function()
 		end
 	}
 
-	GameThemeV2 = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		["Name"] = "GameThemeV2",
+	BetterGameThemes = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
+		["Name"] = "BetterGameThemes",
 		["Function"] = function(callback) 
 			if callback then 
 				if not transformed then
 					transformed = true
 					themefunctions[themeselected["Value"]]()
 				else
-					GameThemeV2["ToggleButton"](false)
+					BetterGameThemes["ToggleButton"](false)
 				end
 			else
 				CreateNotification("GameTheme", "Disabled Next Game", 10)
@@ -10895,7 +10895,7 @@ runFunction(function()
 			return themeselected["Value"]
 		end
 	})
-	themeselected = GameThemeV2.CreateDropdown({
+	themeselected = BetterGameThemes.CreateDropdown({
 		["Name"] = "Theme",
 		["Function"] = function() end,
 		["List"] = {"NebulaSky", "BlueSpace", "CoolSky", "PinkSky", "DarkNight", "Space", "PurpleSky"}
