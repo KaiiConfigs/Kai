@@ -10997,8 +10997,8 @@ runFunction(function()
     })
 end)
 runFunction(function()
-local funnyhighjump = {Enabled = false}
-funnyhighjump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+local BetterHighJump = {Enabled = false}
+BetterHighJump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 Name = "FunnyHighJump",
 Function = function(callback)
 if callback then
@@ -11009,7 +11009,7 @@ if callback then
 	 Workspace.Gravity = 246.2
 	 task.wait(0.2)
 	 Workspace.Gravity = 192.6
-	 funnyhighjump["ToggleButton"](false)
+	 BetterHighJump["ToggleButton"](false)
   end
 end
 end
