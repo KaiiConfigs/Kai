@@ -10999,7 +10999,7 @@ end)
 runFunction(function()
 local BetterHighJump = {Enabled = false}
 BetterHighJump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-Name = "FunnyHighJump",
+Name = "BetterHighJump",
 Function = function(callback)
 if callback then
   if entityLibrary.isAlive then
