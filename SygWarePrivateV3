@@ -10610,12 +10610,13 @@ runFunction(function()
 		end,
 		BlueSpace = function() 
 			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/asset/?id=331591508"
-				game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/asset/?id=331591633"
-				game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/asset/?id=331591735"
-				game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/asset/?id=331591794"
-				game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/asset/?id=331591853"
-				game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/asset/?id=331591919"
+				Sky.SkyboxBk = "rbxassetid://1127563035"
+				Sky.SkyboxDn = "rbxassetid://1127563006"
+				Sky.SkyboxFt = "rbxassetid://1127563026"
+				Sky.SkyboxLf = "rbxassetid://1127563216"
+				Sky.SkyboxRt = "rbxassetid://1127563115"
+				Sky.SkyboxUp = "rbxassetid://1127562999"
+				Sky.SunAngularSize = 10
 			end)
 		end,
 		DarkNight = function() 
