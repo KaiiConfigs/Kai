@@ -11720,4 +11720,9 @@ runFunction(function()
                     }
   
                          game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.ScytheDash:FireServer(unpack(args))
+                  end)
+				until not AntiCheatDisablerModule.Enabled
+			end
+		end
+	})
 end)
