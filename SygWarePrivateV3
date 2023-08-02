@@ -11190,7 +11190,14 @@ runFunction(function()
 							pcall(function()
 								highlight2.FillTransparency = 1
 								while wait() do
-									highlight2.OutlineColor = Color3.fromRGB(9, 9, 204)
+									local highlight2.OutlineColor
+                                                                        local speed = 1
+						                        local redStart = 6
+						                        local greenStart = 4
+						                        local blueStart = 102
+						                        local redEnd = 3
+						                        local greenEnd = 3
+						                        local blueEnd = 210
 								end
 							end)
 						end
