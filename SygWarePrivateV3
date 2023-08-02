@@ -11678,3 +11678,20 @@ end)
         end
     end
 })
+runFunction(function()
+	local SygSpeedModule = {Enabled = false}
+	SygSpeedModule = Guilibrary-ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
+		Name = "SygSpeed",
+		HoverText = "Made by Kai",
+		Function = function(callback)
+		    if callback then
+			    repeat
+				    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
+					task.wait(1.5)
+					game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+					task.wait(1)
+				until not SygSpeedModule.Enabled
+			end
+		end
+    })
+end)
