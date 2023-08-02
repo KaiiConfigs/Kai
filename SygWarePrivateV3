@@ -10685,7 +10685,7 @@ runFunction(function()
 				Lighting.GlobalShadows = true
 				Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
 				Lighting.ShadowSoftness = 0.14
-				Lighting.ClockTime = 5
+				Lighting.ClockTime = 15
 				Lighting.GeographicLatitude = 45
 				Lighting.ExposureCompensation = 0.5
 
@@ -10742,7 +10742,7 @@ runFunction(function()
 				ColorCor.Brightness = 0.3
 				ColorCor.Contrast = 0.5
 				ColorCor.Saturation = -0.3
-				ColorCor.TintColor = Color3.fromRGB(238, 211, 238)
+				ColorCor.TintColor = Color3.fromRGB(255, 236, 255)
 
 				SunRays.Intensity = 0.075
 				SunRays.Spread = 0.727
@@ -10764,13 +10764,13 @@ runFunction(function()
 				Lighting.GlobalShadows = true
 				Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
 				Lighting.ShadowSoftness = 0.2
-				Lighting.ClockTime = 15
+				Lighting.ClockTime = 5
 				Lighting.GeographicLatitude = 45
 				Lighting.ExposureCompensation = 0.5
 
 				Atm.Density = 0.364
 				Atm.Offset = 0.556
-				Atm.Color = Color3.fromRGB(250, 228, 250)
+				Atm.Color = Color3.fromRGB(240, 219, 242)
 				Atm.Decay = Color3.fromRGB(255, 220, 255)
 				Atm.Glare = 0.36
 				Atm.Haze = 1.72	
