@@ -10733,8 +10733,8 @@ runFunction(function()
 				ColorCor.Saturation = -0.3
 				ColorCor.TintColor = Color3.fromRGB(255, 235, 203)
 
-				SunRays.Intensity = 0.075
-				SunRays.Spread = 0.627
+				SunRays.Intensity = 0.055
+				SunRays.Spread = 0.477
 
 				Sky.SkyboxBk = "rbxassetid://154185004"
 				Sky.SkyboxDn = "rbxassetid://154184960"
@@ -10742,17 +10742,17 @@ runFunction(function()
 				Sky.SkyboxLf = "rbxassetid://154184943"
 				Sky.SkyboxRt = "rbxassetid://154184972"
 				Sky.SkyboxUp = "rbxassetid://154185031"
-				Sky.SunAngularSize = 5
+				Sky.SunAngularSize = 4
 
 				Lighting.Ambient = Color3.fromRGB(2,2,2)
-				Lighting.Brightness = 0.3
+				Lighting.Brightness = 0.26
 				Lighting.ColorShift_Bottom = Color3.fromRGB(0,0,0)
 				Lighting.ColorShift_Top = Color3.fromRGB(0,0,0)
-				Lighting.EnvironmentDiffuseScale = 0.2
-				Lighting.EnvironmentSpecularScale = 0.2
+				Lighting.EnvironmentDiffuseScale = 0.18
+				Lighting.EnvironmentSpecularScale = 0.18
 				Lighting.GlobalShadows = true
 				Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
-				Lighting.ShadowSoftness = 0.2
+				Lighting.ShadowSoftness = 0.14
 				Lighting.ClockTime = 15
 				Lighting.GeographicLatitude = 45
 				Lighting.ExposureCompensation = 0.5
@@ -10762,7 +10762,7 @@ runFunction(function()
 				Atm.Color = Color3.fromRGB(179, 59, 249)
 				Atm.Decay = Color3.fromRGB(155, 212, 255)
 				Atm.Glare = 0.46
-				Atm.Haze = 0.92	
+				Atm.Haze = 0.86	
 
 			end)
 		end,
