@@ -10742,7 +10742,7 @@ runFunction(function()
 				ColorCor.Brightness = 0.3
 				ColorCor.Contrast = 0.5
 				ColorCor.Saturation = -0.3
-				ColorCor.TintColor = Color3.fromRGB(255, 235, 203)
+				ColorCor.TintColor = Color3.fromRGB(238, 211, 238)
 
 				SunRays.Intensity = 0.075
 				SunRays.Spread = 0.727
@@ -10770,8 +10770,8 @@ runFunction(function()
 
 				Atm.Density = 0.364
 				Atm.Offset = 0.556
-				Atm.Color = Color3.fromRGB(179, 59, 249)
-				Atm.Decay = Color3.fromRGB(155, 212, 255)
+				Atm.Color = Color3.fromRGB(250, 228, 250)
+				Atm.Decay = Color3.fromRGB(255, 220, 255)
 				Atm.Glare = 0.36
 				Atm.Haze = 1.72	
 
