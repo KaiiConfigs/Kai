@@ -5921,12 +5921,12 @@ runFunction(function()
 				lightingService.GeographicLatitude = 0
 				lightingService.GlobalShadows = false
 				lightingService.TimeOfDay = "13:00:00"
-				lightingService.Sky.SkyboxBk = "rbxassetid://7018684000"
-				lightingService.Sky.SkyboxDn = "rbxassetid://6334928194"
-				lightingService.Sky.SkyboxFt = "rbxassetid://7018684000"
-				lightingService.Sky.SkyboxLf = "rbxassetid://7018684000"
-				lightingService.Sky.SkyboxRt = "rbxassetid://7018684000"
-				lightingService.Sky.SkyboxUp = "rbxassetid://7018689553"
+				lightingService.Sky.SkyboxBk = "rbxassetid://1729400806"
+				lightingService.Sky.SkyboxDn = "rbxassetid://1729396070"
+				lightingService.Sky.SkyboxFt = "rbxassetid://1729398837"
+				lightingService.Sky.SkyboxLf = "rbxassetid://1729399897"
+				lightingService.Sky.SkyboxRt = "rbxassetid://1729397758"
+				lightingService.Sky.SkyboxUp = "rbxassetid://1729490019"
 			end)
 		end,
 		Winter = function() 
