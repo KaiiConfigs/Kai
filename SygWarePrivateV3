@@ -10688,13 +10688,82 @@ runFunction(function()
 			end)
 		end,
 		DarkNight = function() 
-			task.spawn(function()
-				game.Lighting.Sky.SkyboxBk = "rbxassetid://154185004"
-				game.Lighting.Sky.SkyboxDn = "rbxassetid://154184960"
-				game.Lighting.Sky.SkyboxFt = "rbxassetid://154185021"
-				game.Lighting.Sky.SkyboxLf = "rbxassetid://154184943"
-				game.Lighting.Sky.SkyboxRt = "rbxassetid://154184972"
-				game.Lighting.Sky.SkyboxUp = "rbxassetid://154185031"
+			task.spawn(function() 
+
+				local Vignette = true
+
+
+				local Lighting = game:GetService("Lighting")
+				local ColorCor = Instance.new("ColorCorrectionEffect")
+				local SunRays = Instance.new("SunRaysEffect")
+				local Sky = Instance.new("Sky")
+				local Atm = Instance.new("Atmosphere")
+
+
+				for i, v in pairs(Lighting:GetChildren()) do
+					if v then
+						v:Destroy()
+					end
+				end
+
+				ColorCor.Parent = Lighting
+				SunRays.Parent = Lighting
+				Sky.Parent = Lighting
+				Atm.Parent = Lighting
+
+				if Vignette == true then
+					local Gui = Instance.new("ScreenGui")
+					Gui.Parent = StarterGui
+					Gui.IgnoreGuiInset = true
+
+					local ShadowFrame = Instance.new("ImageLabel")
+					ShadowFrame.Parent = Gui
+					ShadowFrame.AnchorPoint = Vector2.new(0,1,0)
+					ShadowFrame.Position = UDim2.new(0,0,0,0)
+					ShadowFrame.Size = UDim2.new(0,0,0,0)
+					ShadowFrame.BackgroundTransparency = 1
+					ShadowFrame.Image = ""
+					ShadowFrame.ImageTransparency = 1
+					ShadowFrame.ZIndex = 0
+				end
+
+
+				ColorCor.Brightness = 0.3
+				ColorCor.Contrast = 0.5
+				ColorCor.Saturation = -0.3
+				ColorCor.TintColor = Color3.fromRGB(255, 235, 203)
+
+				SunRays.Intensity = 0.075
+				SunRays.Spread = 0.627
+
+				Sky.SkyboxBk = "rbxassetid://154185004"
+				Sky.SkyboxDn = "rbxassetid://154184960"
+				Sky.SkyboxFt = "rbxassetid://154185021"
+				Sky.SkyboxLf = "rbxassetid://154184943"
+				Sky.SkyboxRt = "rbxassetid://154184972"
+				Sky.SkyboxUp = "rbxassetid://154185031"
+				Sky.SunAngularSize = 5
+
+				Lighting.Ambient = Color3.fromRGB(2,2,2)
+				Lighting.Brightness = 0.3
+				Lighting.ColorShift_Bottom = Color3.fromRGB(0,0,0)
+				Lighting.ColorShift_Top = Color3.fromRGB(0,0,0)
+				Lighting.EnvironmentDiffuseScale = 0.2
+				Lighting.EnvironmentSpecularScale = 0.2
+				Lighting.GlobalShadows = true
+				Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
+				Lighting.ShadowSoftness = 0.2
+				Lighting.ClockTime = 15
+				Lighting.GeographicLatitude = 45
+				Lighting.ExposureCompensation = 0.5
+
+				Atm.Density = 0.164
+				Atm.Offset = 0.256
+				Atm.Color = Color3.fromRGB(179, 59, 249)
+				Atm.Decay = Color3.fromRGB(155, 212, 255)
+				Atm.Glare = 0.46
+				Atm.Haze = 0.92	
+
 			end)
 		end,
 		CoolSky = function() 
