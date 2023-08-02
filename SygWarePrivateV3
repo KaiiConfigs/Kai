@@ -10685,7 +10685,7 @@ runFunction(function()
 				Lighting.GlobalShadows = true
 				Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
 				Lighting.ShadowSoftness = 0.14
-				Lighting.ClockTime = 15
+				Lighting.ClockTime = 5
 				Lighting.GeographicLatitude = 45
 				Lighting.ExposureCompensation = 0.5
 
