@@ -10490,12 +10490,12 @@ runFunction(function()
 						local healthbarProgressWrapper
 						local healthbar
 						local speed = 1
-						local redStart = 6
-						local greenStart = 4
-						local blueStart = 102
-						local redEnd = 3
-						local greenEnd = 3
-						local blueEnd = 210
+						local redStart = 211
+						local greenStart = 147
+						local blueStart = 230
+						local redEnd = 151
+						local greenEnd = 147
+						local blueEnd = 230
 
 						repeat
 							if not healthbar or not healthbar.Parent then
