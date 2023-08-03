@@ -11321,7 +11321,7 @@ runFunction(function()
 				debug.setupvalue(kuklux.Controllers.DamageIndicatorController.spawnDamageIndicator,10,{
 					Create = function(self,obj,...)
 						obj.Parent.Text = particletexttable[math.random(1,#particletexttable)]
-						obj.Parent.TextColor3 =  Color3.fromRGB(9, 9, 204)
+						obj.Parent.TextColor3 =  Color3.fromRGB(53 82 175)
 						return game:GetService("TweenService"):Create(obj,...)
 					end
 				})
@@ -11349,7 +11349,7 @@ runFunction(function()
 							pcall(function()
 								highlight2.FillTransparency = 1
 								while wait() do
-									highlight2.OutlineColor = Color3.fromRGB(9, 9, 204)
+									highlight2.OutlineColor = Color3.fromRGB(53 82 175)
 								end
 							end)
 						end
