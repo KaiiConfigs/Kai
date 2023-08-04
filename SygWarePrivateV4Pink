@@ -11581,6 +11581,7 @@ runFunction(function()
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/BetterDemonSlayer"))()   
            end)
+                end,
          HelloKitty = function() 
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/PrivateHelloKittyPack"))()   
