@@ -11572,17 +11572,17 @@ runFunction(function()
 				end)            
 			end)
         end,
-         SygPack = function() 
+        SygPack = function() 
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/Kai/main/TexturePacks"))()   
            end)
 		end,
-         BetterDemonSlayer = function() 
+        BetterDemonSlayer = function() 
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/BetterDemonSlayer"))()   
            end)
                 end,
-         HelloKitty = function() 
+        HelloKitty = function() 
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/PrivateHelloKittyPack"))()   
            end)
@@ -11612,7 +11612,7 @@ runFunction(function()
 		["Name"] = "Pack",
 		["Function"] = function() end,
 		["List"] = { 
-                "SygPack", "PrivatePack"
+                "SygPack", "PrivatePack", 
                 "HelloKitty", 
              "BetterDemonSlayer"}
 	     end
