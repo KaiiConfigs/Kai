@@ -11383,31 +11383,6 @@ runFunction(function()
 	local packselected = {["Value"] = "OldBedwars"}
 
 	local packfunctions = {
-		Pack3 = function() 
-			task.spawn(function()
-				loadstring(game:HttpGet("https://https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack7"))()  
-			end)
-		end,
-		Pack2 = function() 
-			task.spawn(function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack8"))()  
-			end)
-		end,
-		Pack1 = function() 
-			task.spawn(function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack6"))()  
-			end)
-		end,
-		CottonCandy = function() 
-			task.spawn(function() 
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack9"))()           
-			end)
-		end,
-		PinkPack = function() 
-			task.spawn(function() 	
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/PinkPack"))()  		             
-			end)
-		end,
 		PrivatePack = function() 
 			task.spawn(function()
 				local Players = game:GetService("Players")
@@ -11597,11 +11572,6 @@ runFunction(function()
 				end)            
 			end)
         end,
-        Pack512x = function() 
-            task.spawn(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack512x"))()   
-           end)
-		end,
          SygPack = function() 
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/Kai/main/TexturePacks"))()   
@@ -11616,7 +11586,7 @@ runFunction(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/PrivateHelloKittyPack"))()   
            end)
 		end,
-		Pack1024x = function() 
+	 Pack1024x = function() 
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack1024x"))()   
            end)
