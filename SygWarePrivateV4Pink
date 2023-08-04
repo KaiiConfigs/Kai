@@ -11585,11 +11585,6 @@ runFunction(function()
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/PrivateHelloKittyPack"))()   
            end)
-		end,
-	 Pack1024x = function() 
-            task.spawn(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack1024x"))()   
-           end)
 		end
 	}
 
