@@ -11611,6 +11611,10 @@ runFunction(function()
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/BetterDemonSlayer"))()   
            end)
+         HelloKitty = function() 
+            task.spawn(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/PrivateHelloKittyPack"))()   
+           end)
 		end,
 		Pack1024x = function() 
             task.spawn(function()
@@ -11642,11 +11646,8 @@ runFunction(function()
 		["Name"] = "Pack",
 		["Function"] = function() end,
 		["List"] = { 
-		"Pack1", "Pack2", 
-		"Pack3",  
-		"PinkPack", "CottonCandy", 
-		"Pack512x", "Pack1024x", 
-                "SygPack", "PrivatePack", 
+                "SygPack", "PrivatePack"
+                "HelloKitty", 
              "BetterDemonSlayer"}
 	})
 end)
