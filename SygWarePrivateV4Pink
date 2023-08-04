@@ -11377,7 +11377,12 @@ runFunction(function()
 		end
 	})
 end)
-local packfunctions = {
+runFunction(function()
+	local transformed = false
+	local TexturePacks = {["Enabled"] = false}
+	local packselected = {["Value"] = "OldBedwars"}
+
+	local packfunctions = {
 		PrivatePack = function() 
 			task.spawn(function()
 				local Players = game:GetService("Players")
