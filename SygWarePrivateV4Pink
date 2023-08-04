@@ -11383,6 +11383,11 @@ runFunction(function()
 	local packselected = {["Value"] = "OldBedwars"}
 
 	local packfunctions = {
+                 CottonCandy = function() 
+			task.spawn(function() 
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack9"))()           
+			end)
+		end,
 		PrivatePack = function() 
 			task.spawn(function()
 				local Players = game:GetService("Players")
@@ -11613,7 +11618,7 @@ runFunction(function()
 		["Function"] = function() end,
 		["List"] = { 
                 "SygPack", "PrivatePack", 
-                "HelloKitty", 
+                "HelloKitty", "CottonCandy", 
              "BetterDemonSlayer"}
 	     end
 	})
