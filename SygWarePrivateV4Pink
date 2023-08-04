@@ -11644,7 +11644,7 @@ runFunction(function()
 		["List"] = { 
 		"Pack1", "Pack2", 
 		"Pack3",  
-		"PinkPack", "CottonCandy", 
+		"HelloKitty", "CottonCandy", 
 		"Pack512x", "Pack1024x", 
                 "SygPack", "PrivatePack", 
              "BetterDemonSlayer"}
