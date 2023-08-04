@@ -11377,12 +11377,7 @@ runFunction(function()
 		end
 	})
 end)
-runFunction(function()
-	local transformed = false
-	local TexturePacks = {["Enabled"] = false}
-	local packselected = {["Value"] = "OldBedwars"}
-
-	local packfunctions = {
+local packfunctions = {
 		PrivatePack = function() 
 			task.spawn(function()
 				local Players = game:GetService("Players")
@@ -11615,6 +11610,7 @@ runFunction(function()
                 "SygPack", "PrivatePack"
                 "HelloKitty", 
              "BetterDemonSlayer"}
+	     end
 	})
 end)
  local void = GuiLibrary["ObjectsThatCanBeSaved"]["CustomModulesWindow"]["Api"].CreateOptionsButton({
