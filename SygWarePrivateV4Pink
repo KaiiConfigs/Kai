@@ -11383,9 +11383,29 @@ runFunction(function()
 	local packselected = {["Value"] = "OldBedwars"}
 
 	local packfunctions = {
-                 CottonCandy = function() 
+		Pack3 = function() 
+			task.spawn(function()
+				loadstring(game:HttpGet("https://https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack7"))()  
+			end)
+		end,
+		Pack2 = function() 
+			task.spawn(function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack8"))()  
+			end)
+		end,
+		Pack1 = function() 
+			task.spawn(function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack6"))()  
+			end)
+		end,
+		CottonCandy = function() 
 			task.spawn(function() 
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack9"))()           
+			end)
+		end,
+		PinkPack = function() 
+			task.spawn(function() 	
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/PinkPack"))()  		             
 			end)
 		end,
 		PrivatePack = function() 
@@ -11577,19 +11597,24 @@ runFunction(function()
 				end)            
 			end)
         end,
-        SygPack = function() 
+        Pack512x = function() 
+            task.spawn(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack512x"))()   
+           end)
+		end,
+         SygPack = function() 
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/Kai/main/TexturePacks"))()   
            end)
 		end,
-        BetterDemonSlayer = function() 
+         BetterDemonSlayer = function() 
             task.spawn(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/BetterDemonSlayer"))()   
            end)
-                end,
-        HelloKitty = function() 
+		end,
+		Pack1024x = function() 
             task.spawn(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/PrivateHelloKittyPack"))()   
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/KaiiConfigs/TexturePack/main/Pack1024x"))()   
            end)
 		end
 	}
@@ -11617,10 +11642,12 @@ runFunction(function()
 		["Name"] = "Pack",
 		["Function"] = function() end,
 		["List"] = { 
+		"Pack1", "Pack2", 
+		"Pack3",  
+		"PinkPack", "CottonCandy", 
+		"Pack512x", "Pack1024x", 
                 "SygPack", "PrivatePack", 
-                "HelloKitty", "CottonCandy", 
              "BetterDemonSlayer"}
-	     end
 	})
 end)
  local void = GuiLibrary["ObjectsThatCanBeSaved"]["CustomModulesWindow"]["Api"].CreateOptionsButton({
