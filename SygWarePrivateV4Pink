@@ -11708,3 +11708,117 @@ runFunction(function()
         end
     })
 end)
+task.spawn(function()
+	local function createannouncement(announcetab)
+		local vapenotifframe = Instance.new("TextButton")
+		vapenotifframe.AnchorPoint = Vector2.new(0.5, 0)
+		vapenotifframe.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+		vapenotifframe.Size = UDim2.new(1, -10, 0, 50)
+		vapenotifframe.Position = UDim2.new(0.5, 0, 0, -100)
+		vapenotifframe.AutoButtonColor = false
+		vapenotifframe.Text = ""
+		vapenotifframe.Parent = shared.GuiLibrary.MainGui
+		local vapenotifframecorner = Instance.new("UICorner")
+		vapenotifframecorner.CornerRadius = UDim.new(0, 256)
+		vapenotifframecorner.Parent = vapenotifframe
+		local vapeicon = Instance.new("Frame")
+		vapeicon.Size = UDim2.new(0, 40, 0, 40)
+		vapeicon.Position = UDim2.new(0, 5, 0, 5)
+		vapeicon.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+		vapeicon.Parent = vapenotifframe
+		local vapeiconicon = Instance.new("ImageLabel")
+		vapeiconicon.BackgroundTransparency = 1
+		vapeiconicon.Size = UDim2.new(1, -10, 1, -10)
+		vapeiconicon.AnchorPoint = Vector2.new(0.5, 0.5)
+		vapeiconicon.Position = UDim2.new(0.5, 0, 0.5, 0)
+		vapeiconicon.Image = getcustomasset("vape/assets/VapeIcon.png")
+		vapeiconicon.Parent = vapeicon
+		local vapeiconcorner = Instance.new("UICorner")
+		vapeiconcorner.CornerRadius = UDim.new(0, 256)
+		vapeiconcorner.Parent = vapeicon
+		local vapetext = Instance.new("TextLabel")
+		vapetext.Size = UDim2.new(1, -55, 1, -10)
+		vapetext.Position = UDim2.new(0, 50, 0, 5)
+		vapetext.BackgroundTransparency = 1
+		vapetext.TextScaled = true
+		vapetext.RichText = true
+		vapetext.Font = Enum.Font.Ubuntu
+		vapetext.Text = announcetab.Text
+		vapetext.TextColor3 = Color3.new(1, 1, 1)
+		vapetext.TextXAlignment = Enum.TextXAlignment.Left
+		vapetext.Parent = vapenotifframe
+		tweenService:Create(vapenotifframe, TweenInfo.new(0.3), {Position = UDim2.new(0.5, 0, 0, 5)}):Play()
+		local sound = Instance.new("Sound")
+		sound.PlayOnRemove = true
+		sound.SoundId = "rbxassetid://6732495464"
+		sound.Parent = workspace
+		sound:Destroy()
+		vapenotifframe.MouseButton1Click:Connect(function()
+			local sound = Instance.new("Sound")
+			sound.PlayOnRemove = true
+			sound.SoundId = "rbxassetid://6732690176"
+			sound.Parent = workspace
+			sound:Destroy()
+			vapenotifframe:Destroy()
+		end)
+		game:GetService("Debris"):AddItem(vapenotifframe, announcetab.Time or 20)
+	end
+runFunction(function()
+	local disabler = GuiLibrary.ObjectsThatCanBeSaved.CustomModulesWindow.Api.CreateOptionsButton({
+		Name = "Scythe Disabler",
+		HoverText = "Use with Scythe",
+		Function = function(callback)
+			if callback then
+				task.spawn(function()
+
+					game:GetService('RunService').RenderStepped:Connect(function()
+
+						local args = {
+							[1] = {
+								["direction"] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector
+							}
+						}
+						
+							   game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.ScytheDash:FireServer(unpack(args))
+					  end)
+				end)
+			end
+		end
+	})
+end)
+
+	local MouseTP = {Enabled = false}
+	local mouseTPRaycastParams = RaycastParams.new()
+	mouseTPRaycastParams.RespectCanCollide = true
+	mouseTPRaycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+	local selectedPosition
+	local mouseTPRespawnConnection
+	
+	MouseTP = GuiLibrary.ObjectsThatCanBeSaved.CustomModulesWindow.Api.CreateOptionsButton({
+		Name = "MouseTP",
+		HoverText = "Resets then tweens to where-ever your mouse was pointing.",
+		Function = function(callback)
+			if callback then
+				mouseTPRaycastParams.FilterDescendantsInstances = {lplr.Character, gameCamera, workspace.Part}
+				local ray = workspace:Raycast(gameCamera.CFrame.p, lplr:GetMouse().UnitRay.Direction * 10000, ClickTPRaycast)
+				selectedPosition = ray and ray.Position
+				if selectedPosition then
+					lplr.Character.Humanoid.Health = 0
+					mouseTPRespawnConnection = lplr.CharacterAdded:Connect(function()
+						repeat task.wait() until lplr.Character.PrimaryPart
+						local mouseTPTween = tweenService:Create(lplr.Character.PrimaryPart, tweenData, {CFrame = CFrame.new(selectedPosition.X,selectedPosition.Y + 1.8,selectedPosition.Z)})
+						mouseTPTween:Play()
+						selectedPosition = nil
+						MouseTP.ToggleButton(false)
+						mouseTPRespawnConnection:Disconnect()
+					end)
+				else 
+					warningNotification("Sygware -> (MouseTP)","Error saving position mouse was pointing at.",4)
+					MouseTP.ToggleButton(false)
+				end				
+			else
+				if mouseTPRespawnConnection then mouseTPRespawnConnection:Disconnect() end
+			end
+		end
+	})
+end)
